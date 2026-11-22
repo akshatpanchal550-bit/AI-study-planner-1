@@ -28,13 +28,18 @@ if (!in_array('mysql', PDO::getAvailableDrivers(), true)) {
     throw new RuntimeException('The PDO MySQL extension (pdo_mysql) is not enabled.');
 }
 
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
+if (getenv('DB_SSL') === 'true') {
+    $options[PDO::MYSQL_ATTR_SSL_CA] = '/etc/ssl/certs/ca-certificates.crt';
+}
+
 return new PDO(
     "mysql:host={$host};port={$port};dbname={$name};charset=utf8mb4",
     $user,
     $password,
-    [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::ATTR_EMULATE_PREPARES => false,
-    ]
+    $options
 );
