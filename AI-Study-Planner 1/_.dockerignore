@@ -1,0 +1,5 @@
+.env
+.git
+.venv
+*.zip
+database
