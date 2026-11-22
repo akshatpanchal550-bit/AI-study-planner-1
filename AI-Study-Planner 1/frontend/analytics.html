@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Analytics | StudyPilot</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/workspace.css">
+</head>
+<body>
+<div class="dashboard-layout">
+	<aside class="sidebar" aria-label="Primary navigation">
+		<div class="sidebar-logo"><div class="metric-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><h2>StudyPilot</h2><span>AI Study Planner</span></div></div>
+		<ul class="sidebar-menu">
+			<li><a href="dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+			<li><a href="planner.html"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Planner</span></a></li>
+			<li><a href="subjects.html"><i class="fa-solid fa-book-open"></i><span>Subjects</span></a></li>
+			<li><a href="tasks.html"><i class="fa-solid fa-list-check"></i><span>Tasks</span></a></li>
+			<li><a href="calendar.html"><i class="fa-solid fa-calendar-days"></i><span>Calendar</span></a></li>
+			<li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a></li>
+			<li><a href="notes.html"><i class="fa-solid fa-note-sticky"></i><span>Notes</span></a></li>
+			<li><a href="notifications.html"><i class="fa-regular fa-bell"></i><span>Notifications</span></a></li>
+			<li><a href="pomodoro.html"><i class="fa-solid fa-stopwatch"></i><span>Focus timer</span></a></li>
+			<li><a href="profile.html"><i class="fa-regular fa-user"></i><span>Profile</span></a></li>
+			<li><a href="settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a></li>
+		</ul>
+	</aside>
+	<main class="main-content">
+		<header class="dashboard-navbar">
+			<div class="left-section"><div><h2>Analytics</h2><p>Progress is more useful when it is easy to read.</p></div></div>
+			<div class="right-section"><button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme"><i class="fa-solid fa-moon" aria-hidden="true"></i></button><div class="user-profile"><div class="metric-icon"><i class="fa-regular fa-user"></i></div><div><span id="dashboardUser">Student</span><small>Study space</small></div></div></div>
+		</header>
+		<section class="page-heading"><div><h1>Your progress at a glance</h1><p>A local summary of completed tasks and focus sessions.</p></div><a class="btn btn-outline-primary" href="pomodoro.html"><i class="fa-solid fa-stopwatch me-2" aria-hidden="true"></i>Start a focus session</a></section>
+		<section class="app-grid app-grid-4 mb-4" id="analyticsMetrics" aria-label="Study summary"></section>
+		<div class="app-grid app-grid-2 analytics-layout">
+			<section class="glass-card" aria-labelledby="weeklyStudyTitle"><div class="d-flex justify-content-between align-items-start mb-4"><div><h2 class="section-label mb-1" id="weeklyStudyTitle">Focus time</h2><p class="calendar-subtitle mb-0">Minutes recorded over the last seven days</p></div><span class="badge text-bg-success">7 days</span></div><div class="weekly-chart" id="weeklyChart" role="img" aria-label="Focus minutes by day"></div></section>
+			<section class="glass-card" aria-labelledby="subjectProgressTitle"><div class="d-flex justify-content-between align-items-start mb-4"><div><h2 class="section-label mb-1" id="subjectProgressTitle">Task progress by subject</h2><p class="calendar-subtitle mb-0">Completed tasks compared with open tasks</p></div><a href="tasks.html" class="small">View tasks</a></div><div id="subjectProgress" class="app-grid"></div></section>
+		</div>
+		<p class="analytics-footnote mt-3"><i class="fa-solid fa-circle-info me-1" aria-hidden="true"></i>These summaries use data saved in this browser. They are not synced to an account.</p>
+	</main>
+</div>
+<script src="assets/js/workspace.js"></script>
+<script src="assets/js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Focus Timer | StudyPilot</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/workspace.css">
+</head>
+<body>
+<div class="dashboard-layout">
+	<aside class="sidebar" aria-label="Primary navigation">
+		<div class="sidebar-logo"><div class="metric-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><h2>StudyPilot</h2><span>AI Study Planner</span></div></div>
+		<ul class="sidebar-menu">
+			<li><a href="dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+			<li><a href="planner.html"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Planner</span></a></li>
+			<li><a href="subjects.html"><i class="fa-solid fa-book-open"></i><span>Subjects</span></a></li>
+			<li><a href="tasks.html"><i class="fa-solid fa-list-check"></i><span>Tasks</span></a></li>
+			<li><a href="calendar.html"><i class="fa-solid fa-calendar-days"></i><span>Calendar</span></a></li>
+			<li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a></li>
+			<li><a href="notes.html"><i class="fa-solid fa-note-sticky"></i><span>Notes</span></a></li>
+			<li><a href="notifications.html"><i class="fa-regular fa-bell"></i><span>Notifications</span></a></li>
+			<li><a href="pomodoro.html"><i class="fa-solid fa-stopwatch"></i><span>Focus timer</span></a></li>
+			<li><a href="profile.html"><i class="fa-regular fa-user"></i><span>Profile</span></a></li>
+			<li><a href="settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a></li>
+		</ul>
+	</aside>
+	<main class="main-content">
+		<header class="dashboard-navbar">
+			<div class="left-section"><div><h2>Focus timer</h2><p>Work in a focused block, then take a real break.</p></div></div>
+			<div class="right-section"><button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme"><i class="fa-solid fa-moon" aria-hidden="true"></i></button><div class="user-profile"><div class="metric-icon"><i class="fa-regular fa-user"></i></div><div><span id="dashboardUser">Student</span><small>Study space</small></div></div></div>
+		</header>
+		<section class="page-heading"><div><h1>One thing at a time</h1><p>Choose a session length and give the current task your attention.</p></div><a class="btn btn-outline-primary" href="analytics.html"><i class="fa-solid fa-chart-simple me-2" aria-hidden="true"></i>View progress</a></section>
+		<div class="app-grid app-grid-2 focus-layout">
+			<section class="glass-card focus-panel" aria-labelledby="focusTitle">
+				<h2 class="section-label text-center" id="focusTitle">Focus session</h2>
+				<div class="timer-modes" role="group" aria-label="Timer mode">
+					<button class="timer-mode is-active" type="button" data-mode="focus" aria-pressed="true">Focus</button>
+					<button class="timer-mode" type="button" data-mode="short" aria-pressed="false">Short break</button>
+					<button class="timer-mode" type="button" data-mode="long" aria-pressed="false">Long break</button>
+				</div>
+				<div class="timer-face" id="timerFace"><span id="timerDisplay" role="timer" aria-label="25 minutes remaining">25:00</span><small id="timerCaption">Ready when you are</small></div>
+				<div class="focus-controls"><button class="btn btn-primary" id="startTimer" type="button"><i class="fa-solid fa-play me-2" aria-hidden="true"></i>Start</button><button class="btn btn-outline-secondary" id="pauseTimer" type="button" disabled><i class="fa-solid fa-pause me-2" aria-hidden="true"></i>Pause</button><button class="icon-btn" id="resetTimer" type="button" aria-label="Reset timer"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></button></div>
+				<p class="focus-status" id="timerStatus" aria-live="polite">A small, steady block is enough to begin.</p>
+			</section>
+			<aside class="glass-card focus-summary" aria-labelledby="focusSummaryTitle">
+				<span class="metric-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+				<h2 class="section-label mt-3" id="focusSummaryTitle">Today’s focus</h2>
+				<p class="calendar-subtitle">A session is counted when a focus timer reaches zero.</p>
+				<div class="focus-total"><strong id="todayFocusMinutes">0</strong><span>minutes recorded today</span></div>
+				<a href="tasks.html" class="btn btn-outline-primary mt-3">Choose a task</a>
+			</aside>
+		</div>
+	</main>
+</div>
+<script src="assets/js/workspace.js"></script>
+<script src="assets/js/pomodoro.js"></script>
+</body>
+</html>

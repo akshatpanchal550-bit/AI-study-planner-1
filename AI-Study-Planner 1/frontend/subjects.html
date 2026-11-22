@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+                    META TAGS
+    =========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Subjects | Smart AI Study Planner
+
+    </title>
+
+    <!-- ==========================================
+                    FAVICON
+    =========================================== -->
+
+    <!-- ==========================================
+                    GOOGLE FONT
+    =========================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- ==========================================
+                    BOOTSTRAP
+    =========================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- ==========================================
+                    FONT AWESOME
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ==========================================
+                    AOS
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- ==========================================
+                    CSS
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+    <link rel="stylesheet"
+          href="assets/css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="assets/css/subjects.css">
+
+        <link rel="stylesheet"
+            href="assets/css/workspace.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+                PAGE LOADER
+========================================== -->
+
+<div id="loader">
+
+    <div class="loader-circle"></div>
+
+</div>
+
+<!-- ==========================================
+                SIDEBAR
+========================================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+
+        <h3>
+
+            Smart AI
+
+        </h3>
+
+    </div>
+
+    <ul class="sidebar-menu">
+
+        <li>
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="planner.html">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>AI Planner</span>
+
+            </a>
+
+        </li>
+
+        <li class="active">
+
+            <a href="subjects.html">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>Subjects</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="tasks.html">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <span>Tasks</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="calendar.html">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <span>Calendar</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="analytics.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Analytics</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="notes.html">
+
+                <i class="fa-solid fa-note-sticky"></i>
+
+                <span>Notes</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="notifications.html">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>Notifications</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="pomodoro.html">
+
+                <i class="fa-solid fa-stopwatch"></i>
+
+                <span>Focus timer</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="profile.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Profile</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</aside>
+
+<!-- ==========================================
+                MAIN CONTENT
+========================================== -->
+
+<div class="main-content">
+
+<header class="dashboard-navbar">
+
+    <div class="left-section">
+
+        <h2>
+
+            📚 My Subjects
+
+        </h2>
+
+        <p>
+
+            Manage all your study subjects in one place.
+
+        </p>
+
+    </div>
+
+    <div class="right-section">
+
+        <button id="themeToggle"
+                class="icon-btn">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+        <a class="user-profile" href="profile.html">
+
+            <div>
+
+                <span id="dashboardUser">
+
+                    Student
+
+                </span>
+
+                <small>
+
+                    Student
+
+                </small>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</header>
+
+<!-- ==========================================
+                PAGE HEADER
+========================================== -->
+
+<section class="subjects-content">
+
+    <div class="glass-card"
+         data-aos="fade-up">
+
+        <span class="badge bg-primary">
+
+            📚 Subjects
+
+        </span>
+
+        <h1>
+
+            Subject Management
+
+        </h1>
+
+        <p>
+
+            Add, edit and organize all your study subjects with progress tracking.
+
+        </p>
+
+    </div>
+
+    <!-- ==========================================
+                ADD SUBJECT FORM
+========================================== -->
+
+<div class="glass-card mt-5"
+     data-aos="fade-up">
+
+    <h3>
+
+        <i class="fa-solid fa-circle-plus"></i>
+
+        Add New Subject
+
+    </h3>
+
+    <form id="subjectForm"
+          class="mt-4">
+
+        <div class="row g-4">
+
+            <!-- Subject Name -->
+
+            <div class="col-md-6">
+
+                <label class="form-label">
+
+                    Subject Name
+
+                </label>
+
+                <input type="text"
+                       id="subjectName"
+                       class="form-control"
+                       placeholder="Example: Python Programming"
+                       required>
+
+            </div>
+
+            <!-- Teacher -->
+
+            <div class="col-md-6">
+
+                <label class="form-label">
+
+                    Teacher Name
+
+                </label>
+
+                <input type="text"
+                       id="teacherName"
+                       class="form-control"
+                       placeholder="Example: Mr. Patel"
+                       required>
+
+            </div>
+
+            <!-- Total Chapters -->
+
+            <div class="col-md-6">
+
+                <label class="form-label">
+
+                    Total Chapters
+
+                </label>
+
+                <input type="number"
+                       id="totalChapters"
+                       class="form-control"
+                       placeholder="10"
+                       min="1"
+                       required>
+
+            </div>
+
+            <!-- Completed Chapters -->
+
+            <div class="col-md-6">
+
+                <label class="form-label">
+
+                    Completed Chapters
+
+                </label>
+
+                <input type="number"
+                       id="completedChapters"
+                       class="form-control"
+                       placeholder="0"
+                       min="0"
+                       required>
+
+            </div>
+
+            <!-- Exam Date -->
+
+            <div class="col-md-6">
+
+                <label class="form-label">
+
+                    Exam Date
+
+                </label>
+
+                <input type="date"
+                       id="examDate"
+                       class="form-control">
+
+            </div>
+
+            <!-- Difficulty -->
+
+            <div class="col-md-6">
+
+                <label class="form-label">
+
+                    Difficulty Level
+
+                </label>
+
+                <select id="difficulty"
+                        class="form-select">
+
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+
+            <button type="submit"
+                    class="btn btn-primary btn-lg">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Subject
+
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+<!-- ==========================================
+                SUBJECT LIST TITLE
+========================================== -->
+
+<div class="glass-card mt-5"
+     data-aos="fade-up">
+
+    <div class="d-flex justify-content-between align-items-center">
+
+        <h3>
+
+            📚 My Subjects
+
+        </h3>
+
+        <span class="badge bg-success">
+
+            Active Subjects
+
+        </span>
+
+    </div>
+
+    <div id="subjectsContainer"
+         class="row mt-4 g-4">
+
+        <!-- JavaScript will load subject cards here -->
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+                SUBJECT PROGRESS
+========================================== -->
+
+<div class="glass-card mt-5"
+     data-aos="fade-up">
+
+    <h3>
+
+        📈 Subject Progress
+
+    </h3>
+
+    <div class="mt-4">
+
+        <!-- Python -->
+
+        <div class="mb-4">
+
+            <div class="d-flex justify-content-between">
+
+                <span>Python Programming</span>
+
+                <span>90%</span>
+
+            </div>
+
+            <div class="progress mt-2">
+
+                <div class="progress-bar bg-success"
+                     style="width:90%">
+
+                    90%
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DBMS -->
+
+        <div class="mb-4">
+
+            <div class="d-flex justify-content-between">
+
+                <span>DBMS</span>
+
+                <span>75%</span>
+
+            </div>
+
+            <div class="progress mt-2">
+
+                <div class="progress-bar bg-info"
+                     style="width:75%">
+
+                    75%
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Java -->
+
+        <div class="mb-4">
+
+            <div class="d-flex justify-content-between">
+
+                <span>Java</span>
+
+                <span>65%</span>
+
+            </div>
+
+            <div class="progress mt-2">
+
+                <div class="progress-bar bg-warning"
+                     style="width:65%">
+
+                    65%
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- AI -->
+
+        <div class="mb-2">
+
+            <div class="d-flex justify-content-between">
+
+                <span>Artificial Intelligence</span>
+
+                <span>50%</span>
+
+            </div>
+
+            <div class="progress mt-2">
+
+                <div class="progress-bar bg-danger"
+                     style="width:50%">
+
+                    50%
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+                SUBJECT STATISTICS
+========================================== -->
+
+<div class="row mt-5 g-4">
+
+    <div class="col-md-3">
+
+        <div class="glass-card text-center">
+
+            <i class="fa-solid fa-book fa-2x text-primary mb-3"></i>
+
+            <h2>8</h2>
+
+            <p>Total Subjects</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="glass-card text-center">
+
+            <i class="fa-solid fa-circle-check fa-2x text-success mb-3"></i>
+
+            <h2>5</h2>
+
+            <p>Completed</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="glass-card text-center">
+
+            <i class="fa-solid fa-clock fa-2x text-warning mb-3"></i>
+
+            <h2>3</h2>
+
+            <p>In Progress</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="glass-card text-center">
+
+            <i class="fa-solid fa-trophy fa-2x text-danger mb-3"></i>
+
+            <h2>82%</h2>
+
+            <p>Overall Progress</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+                UPCOMING EXAMS
+========================================== -->
+
+<div class="glass-card mt-5"
+     data-aos="fade-up">
+
+    <h3>
+
+        📝 Upcoming Exams
+
+    </h3>
+
+    <div class="table-responsive mt-4">
+
+        <table class="table table-dark table-hover align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>Subject</th>
+
+                    <th>Exam Date</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Python Programming</td>
+
+                    <td>15 August 2026</td>
+
+                    <td>
+
+                        <span class="badge bg-danger">
+
+                            High Priority
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Database Management</td>
+
+                    <td>18 August 2026</td>
+
+                    <td>
+
+                        <span class="badge bg-warning text-dark">
+
+                            Prepare
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Java Programming</td>
+
+                    <td>22 August 2026</td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            On Track
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Artificial Intelligence</td>
+
+                    <td>28 August 2026</td>
+
+                    <td>
+
+                        <span class="badge bg-info">
+
+                            Revision
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+                QUICK ACTIONS
+========================================== -->
+
+<div class="row mt-5 g-4">
+
+    <div class="col-md-4">
+
+        <a href="planner.html"
+           class="glass-card text-center quick-card d-block text-decoration-none">
+
+            <i class="fa-solid fa-robot fa-2x mb-3"></i>
+
+            <h5>
+
+                AI Study Planner
+
+            </h5>
+
+            <p>
+
+                Generate a smart study plan.
+
+            </p>
+
+        </a>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <a href="tasks.html"
+           class="glass-card text-center quick-card d-block text-decoration-none">
+
+            <i class="fa-solid fa-list-check fa-2x mb-3"></i>
+
+            <h5>
+
+                Manage Tasks
+
+            </h5>
+
+            <p>
+
+                View and complete your tasks.
+
+            </p>
+
+        </a>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <a href="analytics.html"
+           class="glass-card text-center quick-card d-block text-decoration-none">
+
+            <i class="fa-solid fa-chart-line fa-2x mb-3"></i>
+
+            <h5>
+
+                Analytics
+
+            </h5>
+
+            <p>
+
+                Track your learning progress.
+
+            </p>
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+                AI STUDY TIPS
+========================================== -->
+
+<section class="mt-5">
+
+    <div class="glass-card" data-aos="fade-up">
+
+        <h3>
+
+            🤖 AI Study Tips
+
+        </h3>
+
+        <div class="row mt-4">
+
+            <div class="col-md-4">
+
+                <div class="tip-card">
+
+                    <i class="fa-solid fa-book-open fa-2x text-primary mb-3"></i>
+
+                    <h5>
+
+                        Study Daily
+
+                    </h5>
+
+                    <p>
+
+                        Study at least 2 hours every day to maintain consistency.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="tip-card">
+
+                    <i class="fa-solid fa-brain fa-2x text-success mb-3"></i>
+
+                    <h5>
+
+                        Practice Regularly
+
+                    </h5>
+
+                    <p>
+
+                        Solve coding problems and revise previous topics every week.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="tip-card">
+
+                    <i class="fa-solid fa-trophy fa-2x text-warning mb-3"></i>
+
+                    <h5>
+
+                        Stay Focused
+
+                    </h5>
+
+                    <p>
+
+                        Avoid distractions and complete today's goals before starting new topics.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                FOOTER
+========================================== -->
+
+<footer class="dashboard-footer mt-5">
+
+    <p>
+
+        © 2026 Smart AI Study Planner
+
+        <br>
+
+        Developed by Team Smart AI Study Planner
+
+    </p>
+
+</footer>
+
+</section>
+
+</div>
+
+<!-- ==========================================
+                JAVASCRIPT
+========================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="assets/js/workspace.js"></script>
+
+<script src="assets/js/subjects.js"></script>
+
+<script>
+
+if (typeof AOS !== "undefined") {
+
+    AOS.init({ duration: 700, once: true });
+
+}
+
+</script>
+
+</body>
+
+</html>

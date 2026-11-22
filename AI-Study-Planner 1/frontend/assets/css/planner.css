@@ -1,0 +1,723 @@
+/* ==========================================================
+                    PLANNER PAGE
+            Smart AI Study Planner
+========================================================== */
+
+/* ===========================
+        PAGE LAYOUT
+=========================== */
+
+.planner-content{
+
+    padding:30px;
+
+}
+
+/* ===========================
+        GLASS CARD
+=========================== */
+
+.glass-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+.glass-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/* ===========================
+        PAGE TITLE
+=========================== */
+
+.planner-content h1{
+
+    font-size:2.4rem;
+
+    font-weight:700;
+
+    margin-top:15px;
+
+    margin-bottom:15px;
+
+}
+
+.planner-content p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+        FORM
+=========================== */
+
+.planner-form label{
+
+    color:#fff;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.planner-form .form-control,
+
+.planner-form .form-select{
+
+    background:#1e293b;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#fff;
+
+    border-radius:14px;
+
+    padding:14px;
+
+}
+
+.planner-form .form-control:focus,
+
+.planner-form .form-select:focus{
+
+    background:#1e293b;
+
+    color:#fff;
+
+    border-color:#4f46e5;
+
+    box-shadow:0 0 0 .2rem rgba(79,70,229,.25);
+
+}
+
+/* ===========================
+        BUTTON
+=========================== */
+
+.btn-primary{
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:14px 28px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+                    GENERATED PLAN
+========================================================== */
+
+#planResult{
+
+    margin-top:40px;
+
+}
+
+#planOutput{
+
+    margin-top:25px;
+
+}
+
+#planOutput .alert{
+
+    border-radius:16px;
+
+    padding:18px;
+
+    font-size:16px;
+
+    border:none;
+
+}
+
+/* ==========================================================
+                    TABLES
+========================================================== */
+
+.table{
+
+    margin-top:20px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+.table-dark{
+
+    background:#111827;
+
+}
+
+.table thead th{
+
+    background:#1e293b;
+
+    color:#fff;
+
+    border:none;
+
+    font-weight:600;
+
+}
+
+.table tbody td{
+
+    color:#e5e7eb;
+
+    border-color:rgba(255,255,255,.08);
+
+    vertical-align:middle;
+
+}
+
+.table tbody tr:hover{
+
+    background:rgba(255,255,255,.05);
+
+}
+
+/* ==========================================================
+                    BADGES
+========================================================== */
+
+.badge{
+
+    font-size:13px;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+}
+
+/* ==========================================================
+                    PROGRESS BAR
+========================================================== */
+
+.progress{
+
+    height:12px;
+
+    background:#1f2937;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-top:8px;
+
+}
+
+.progress-bar{
+
+    font-size:11px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ==========================================================
+                    AI RECOMMENDATIONS
+========================================================== */
+
+.recommendation-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+.recommend-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:16px;
+
+    transition:.3s;
+
+}
+
+.recommend-item:hover{
+
+    transform:translateY(-4px);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.recommend-item i{
+
+    font-size:28px;
+
+    color:#4f46e5;
+
+    margin-top:5px;
+
+}
+
+.recommend-item h5{
+
+    color:#ffffff;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.recommend-item p{
+
+    color:#cbd5e1;
+
+    margin:0;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+                    TIP CARDS
+========================================================== */
+
+.tip-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    height:100%;
+
+    transition:.3s;
+
+}
+
+.tip-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.tip-card h5{
+
+    color:#ffffff;
+
+    margin:15px 0;
+
+    font-weight:600;
+
+}
+
+.tip-card p{
+
+    color:#cbd5e1;
+
+    margin:0;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+                    MOTIVATION CARD
+========================================================== */
+
+.motivation-card{
+
+    text-align:center;
+
+}
+
+.motivation-card h2{
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.motivation-card blockquote{
+
+    font-size:20px;
+
+    color:#f8fafc;
+
+    font-style:italic;
+
+    margin:0;
+
+}
+
+/* ==========================================================
+                    ACTION BUTTONS
+========================================================== */
+
+#savePlan,
+#downloadPlan{
+
+    min-width:220px;
+
+    padding:14px 25px;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+#savePlan:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(34,197,94,.35);
+
+}
+
+#downloadPlan:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(239,68,68,.35);
+
+}
+
+/* ==========================================================
+                    FORM ANIMATION
+========================================================== */
+
+.planner-form .form-control,
+.planner-form .form-select{
+
+    transition:.3s;
+
+}
+
+.planner-form .form-control:hover,
+.planner-form .form-select:hover{
+
+    border-color:#6366f1;
+
+}
+
+.planner-form .form-control::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/* ==========================================================
+                    GLASS CARD ANIMATION
+========================================================== */
+
+.glass-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+                    TABLE HOVER
+========================================================== */
+
+.table tbody tr{
+
+    transition:.3s;
+
+}
+
+.table tbody tr:hover{
+
+    transform:scale(1.01);
+
+}
+
+/* ==========================================================
+                    SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#4f46e5;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#6366f1;
+
+}
+
+/* ==========================================================
+                    RESPONSIVE DESIGN
+========================================================== */
+
+@media (max-width: 991px){
+
+    .planner-content{
+
+        padding:20px;
+
+    }
+
+    .glass-card{
+
+        padding:22px;
+
+    }
+
+    .planner-content h1{
+
+        font-size:2rem;
+
+    }
+
+    .recommend-item{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .recommend-item i{
+
+        margin:auto;
+
+    }
+
+    #savePlan,
+    #downloadPlan{
+
+        width:100%;
+
+        margin-bottom:15px;
+
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .planner-content{
+
+        padding:15px;
+
+    }
+
+    .planner-content h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .planner-content h3{
+
+        font-size:1.3rem;
+
+    }
+
+    .glass-card{
+
+        padding:18px;
+
+    }
+
+    .tip-card{
+
+        margin-bottom:20px;
+
+    }
+
+    .table{
+
+        font-size:14px;
+
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .planner-content h1{
+
+        font-size:1.6rem;
+
+    }
+
+    .planner-content p{
+
+        font-size:14px;
+
+    }
+
+    .planner-form .form-control,
+    .planner-form .form-select{
+
+        padding:12px;
+
+        font-size:14px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    .badge{
+
+        font-size:11px;
+
+    }
+
+}
+
+/* ==========================================================
+                    SHOW CARD ANIMATION
+========================================================== */
+
+.show-card{
+
+    animation:showCard .6s ease forwards;
+
+}
+
+@keyframes showCard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+                    FOOTER
+========================================================== */
+
+.dashboard-footer{
+
+    text-align:center;
+
+    padding:30px 15px;
+
+    color:#94a3b8;
+
+    font-size:15px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin-top:60px;
+
+}
+
+    

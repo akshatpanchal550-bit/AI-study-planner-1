@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+                    META TAGS
+    =========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Smart AI Study Planner</title>
+
+    <!-- ==========================================
+                    FAVICON
+    =========================================== -->
+
+    <!-- ==========================================
+                    GOOGLE FONTS
+    =========================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- ==========================================
+                    BOOTSTRAP
+    =========================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- ==========================================
+                    FONT AWESOME
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ==========================================
+                    AOS ANIMATION
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- ==========================================
+                    CUSTOM CSS
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+    <link rel="stylesheet"
+          href="assets/css/dashboard.css">
+
+        <link rel="stylesheet"
+            href="assets/css/workspace.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+                PAGE LOADER
+=========================================== -->
+
+<div id="loader">
+
+    <div class="loader-circle"></div>
+
+</div>
+
+<!-- ==========================================
+                DASHBOARD LAYOUT
+=========================================== -->
+
+<div class="dashboard-layout">
+
+<!-- ==========================================
+                SIDEBAR
+=========================================== -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+
+        <div>
+
+            <h2>StudyPilot</h2>
+
+            <span>AI Study Planner</span>
+
+        </div>
+
+    </div>
+
+    <ul class="sidebar-menu">
+
+        <li class="active">
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="planner.html">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>AI Planner</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="subjects.html">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>Subjects</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="tasks.html">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <span>Tasks</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="calendar.html">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <span>Calendar</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="analytics.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Analytics</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="notes.html">
+
+                <i class="fa-solid fa-note-sticky"></i>
+
+                <span>Notes</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="notifications.html">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span>Notifications</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="pomodoro.html">
+
+                <i class="fa-solid fa-stopwatch"></i>
+
+                <span>Focus timer</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="profile.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Profile</span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</aside>
+
+<!-- ==========================================
+                MAIN CONTENT START
+=========================================== -->
+
+<div class="main-content">
+
+    <!-- ==========================================
+                TOP NAVBAR
+========================================== -->
+
+<header class="dashboard-navbar">
+
+    <div class="left-section">
+
+        <button
+            id="menuToggle"
+            class="icon-btn mobile-menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <div>
+
+            <h2>
+
+                Dashboard
+
+            </h2>
+
+            <p>
+
+                Welcome back to your Smart AI Study Planner.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="right-section">
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Search anything...">
+
+        </div>
+
+        <!-- Notification -->
+
+        <a class="icon-btn" href="notifications.html" aria-label="Open notifications">
+
+            <i class="fa-regular fa-bell"></i>
+
+        </a>
+
+        <!-- Dark Mode -->
+
+        <button
+            id="themeToggle"
+            class="icon-btn">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+        <!-- User -->
+
+        <a
+            class="user-profile"
+            href="profile.html">
+
+            <div>
+
+                <h6
+                    id="dashboardUser">
+
+                    Student
+
+                </h6>
+
+                <small>
+
+                    Online
+
+                </small>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</header>
+
+<!-- ==========================================
+            WELCOME SECTION
+========================================== -->
+
+<section
+    class="welcome-card glass-card"
+    data-aos="fade-up">
+
+    <div class="welcome-left">
+
+        <span class="badge bg-primary">
+
+            🤖 AI Powered
+
+        </span>
+
+        <h1>
+
+            Welcome Back,
+
+            <span id="welcomeUser">
+
+                Student
+
+            </span>
+
+            👋
+
+        </h1>
+
+        <p>
+
+            Your AI Study Planner is ready.
+
+            Complete today's tasks,
+
+            improve your learning streak,
+
+            and achieve your weekly goals.
+
+        </p>
+
+        <div class="welcome-buttons">
+
+            <a
+                href="planner.html"
+                class="btn btn-primary">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                Generate AI Plan
+
+            </a>
+
+            <a
+                href="tasks.html"
+                class="btn btn-outline-light">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                View Tasks
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="welcome-right">
+
+        <div class="welcome-art" aria-hidden="true"><i class="fa-solid fa-robot"></i><span class="welcome-art-cap"><i class="fa-solid fa-book-open"></i></span></div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                DASHBOARD STATISTICS
+========================================== -->
+
+<section class="stats-section mt-5">
+
+    <div class="row g-4">
+
+        <!-- Subjects -->
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stat-card glass-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <h2 data-count="8">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Total Subjects
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Tasks -->
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stat-card glass-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <h2 data-count="25">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Completed Tasks
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Streak -->
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stat-card glass-card">
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <h2 data-count="18">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Day Streak
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Study Hours -->
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="stat-card glass-card">
+
+                <div class="stat-icon purple">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <h2 data-count="124">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Study Hours
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                TODAY'S PROGRESS
+========================================== -->
+
+<section class="today-progress mt-5">
+
+    <div class="glass-card">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+
+                <h3>
+
+                    Today's Progress
+
+                </h3>
+
+                <p>
+
+                    Complete your daily learning targets.
+
+                </p>
+
+            </div>
+
+            <span class="badge bg-success" id="todayCompletion">
+
+                70% Completed
+
+            </span>
+
+        </div>
+
+           <div class="progress mb-4"
+             style="height:12px;">
+
+              <div class="progress-bar bg-success" id="todayProgressBar"
+
+                  style="width:0%;">
+
+            </div>
+
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col-4">
+
+                <h4 id="todayTaskCount">0
+
+                </h4>
+
+                <small>
+
+                    Tasks Today
+
+                </small>
+
+            </div>
+
+            <div class="col-4">
+
+                <h4 id="todayFocusTime">0m
+
+                </h4>
+
+                <small>
+
+                    Focus Time
+
+                </small>
+
+            </div>
+
+            <div class="col-4">
+
+                <h4 id="todayDoneCount">0%
+
+                </h4>
+
+                <small>
+
+                    Completed
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                TODAY'S SCHEDULE
+========================================== -->
+
+<section class="schedule-section mt-5">
+
+    <div class="glass-card">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <h3>
+
+                📅 Today's Schedule
+
+            </h3>
+
+            <a href="planner.html"
+               class="btn btn-primary btn-sm">
+
+                View Planner
+
+            </a>
+
+        </div>
+
+        <div class="schedule-list" id="todaySchedule">
+
+            <div class="schedule-item">
+
+                <div>
+
+                    <strong>
+
+                        Python Programming
+
+                    </strong>
+
+                    <p>
+
+                        09:00 AM - 11:00 AM
+
+                    </p>
+
+                </div>
+
+                <span class="badge bg-primary">
+
+                    2 Hours
+
+                </span>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <div>
+
+                    <strong>
+
+                        Database Management
+
+                    </strong>
+
+                    <p>
+
+                        11:30 AM - 01:00 PM
+
+                    </p>
+
+                </div>
+
+                <span class="badge bg-success">
+
+                    1.5 Hours
+
+                </span>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <div>
+
+                    <strong>
+
+                        Web Development
+
+                    </strong>
+
+                    <p>
+
+                        02:00 PM - 04:00 PM
+
+                    </p>
+
+                </div>
+
+                <span class="badge bg-warning">
+
+                    2 Hours
+
+                </span>
+
+            </div>
+
+            <div class="schedule-item">
+
+                <div>
+
+                    <strong>
+
+                        AI Revision
+
+                    </strong>
+
+                    <p>
+
+                        05:30 PM - 06:30 PM
+
+                    </p>
+
+                </div>
+
+                <span class="badge bg-danger">
+
+                    1 Hour
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            ANALYTICS & SUBJECT PROGRESS
+========================================== -->
+
+<section class="dashboard-analytics mt-5">
+
+    <div class="row g-4">
+
+        <!-- Study Analytics -->
+
+        <div class="col-lg-8">
+
+            <div class="glass-card analytics-card">
+
+                <div class="card-header-custom">
+
+                    <h3>
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Study Analytics
+
+                    </h3>
+
+                    <select class="form-select w-auto">
+
+                        <option>This Week</option>
+                        <option>This Month</option>
+                        <option>This Year</option>
+
+                    </select>
+
+                </div>
+
+                <canvas id="studyChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- Subject Progress -->
+
+        <div class="col-lg-4">
+
+            <div class="glass-card">
+
+                <div class="card-header-custom">
+
+                    <h3>
+
+                        📚 Subject Progress
+
+                    </h3>
+
+                </div>
+
+                <div class="subject-progress">
+
+                    <!-- Python -->
+
+                    <div class="subject-item">
+
+                        <div class="d-flex justify-content-between">
+
+                            <span>Python</span>
+
+                            <strong>90%</strong>
+
+                        </div>
+
+                        <div class="progress mt-2">
+
+                            <div class="progress-bar bg-success"
+
+                                 style="width:90%">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- DBMS -->
+
+                    <div class="subject-item mt-4">
+
+                        <div class="d-flex justify-content-between">
+
+                            <span>DBMS</span>
+
+                            <strong>76%</strong>
+
+                        </div>
+
+                        <div class="progress mt-2">
+
+                            <div class="progress-bar bg-info"
+
+                                 style="width:76%">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Web Development -->
+
+                    <div class="subject-item mt-4">
+
+                        <div class="d-flex justify-content-between">
+
+                            <span>Web Development</span>
+
+                            <strong>68%</strong>
+
+                        </div>
+
+                        <div class="progress mt-2">
+
+                            <div class="progress-bar bg-warning"
+
+                                 style="width:68%">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- AI -->
+
+                    <div class="subject-item mt-4">
+
+                        <div class="d-flex justify-content-between">
+
+                            <span>Artificial Intelligence</span>
+
+                            <strong>52%</strong>
+
+                        </div>
+
+                        <div class="progress mt-2">
+
+                            <div class="progress-bar bg-danger"
+
+                                 style="width:52%">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                AI RECOMMENDATIONS
+========================================== -->
+
+<section class="mt-5">
+
+    <div class="glass-card">
+
+        <div class="card-header-custom">
+
+            <h3>
+
+                🤖 AI Recommendations
+
+            </h3>
+
+        </div>
+
+        <div class="recommendation-list">
+
+            <div class="recommend-item">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                <div>
+
+                    <h5>Focus on DBMS</h5>
+
+                    <p>
+
+                        Your DBMS progress is lower than Python.
+                        Spend at least 60 more minutes today.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="recommend-item">
+
+                <i class="fa-solid fa-brain"></i>
+
+                <div>
+
+                    <h5>Revision Reminder</h5>
+
+                    <p>
+
+                        Revise yesterday's topics before starting
+                        a new lesson.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="recommend-item">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <div>
+
+                    <h5>Best Study Time</h5>
+
+                    <p>
+
+                        According to your activity,
+                        7 PM to 9 PM is your most productive time.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                QUICK NOTES
+========================================== -->
+
+<section class="mt-5">
+
+    <div class="row g-4">
+
+        <!-- Notes -->
+
+        <div class="col-lg-6">
+
+            <div class="glass-card">
+
+                <div class="card-header-custom">
+
+                    <h3>
+
+                        📝 Quick Notes
+
+                    </h3>
+
+                </div>
+
+                <textarea
+                    class="form-control notes-box"
+                    rows="8"
+                    placeholder="Write your important notes here..."></textarea>
+
+                <button
+                    class="btn btn-primary mt-3">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Save Notes
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Achievements -->
+
+        <div class="col-lg-6">
+
+            <div class="glass-card">
+
+                <div class="card-header-custom">
+
+                    <h3>
+
+                        🏆 Achievements
+
+                    </h3>
+
+                </div>
+
+                <div class="row g-3">
+
+                    <div class="col-md-4">
+
+                        <div class="achievement-card">
+
+                            <div class="achievement-icon">
+
+                                🥇
+
+                            </div>
+
+                            <h5>
+
+                                7 Day Streak
+
+                            </h5>
+
+                            <p>
+
+                                Studied continuously for 7 days.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="achievement-card">
+
+                            <div class="achievement-icon">
+
+                                🚀
+
+                            </div>
+
+                            <h5>
+
+                                Fast Learner
+
+                            </h5>
+
+                            <p>
+
+                                Completed 10 lessons this week.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="achievement-card">
+
+                            <div class="achievement-icon">
+
+                                📚
+
+                            </div>
+
+                            <h5>
+
+                                Book Master
+
+                            </h5>
+
+                            <p>
+
+                                Finished all planned subjects.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            POMODORO + NOTIFICATIONS + AI SCORE
+========================================== -->
+
+<section class="mt-5">
+
+    <div class="row g-4">
+
+        <!-- Pomodoro -->
+
+        <div class="col-lg-4">
+
+            <div class="glass-card timer-card">
+
+                <div class="card-header-custom">
+
+                    <h3>
+
+                        ⏱ Focus Timer
+
+                    </h3>
+
+                </div>
+
+                <div class="timer-circle">
+
+                    <h1 id="timer">
+
+                        25:00
+
+                    </h1>
+
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+
+                    <button
+                        class="btn btn-success"
+                        id="startTimer">
+
+                        Start
+
+                    </button>
+
+                    <button
+                        class="btn btn-warning"
+                        id="pauseTimer">
+
+                        Pause
+
+                    </button>
+
+                    <button
+                        class="btn btn-danger"
+                        id="resetTimer">
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Notifications -->
+
+        <div class="col-lg-4">
+
+            <div class="glass-card">
+
+                <div class="card-header-custom">
+
+                    <h3>
+
+                        🔔 Notifications
+
+                    </h3>
+
+                </div>
+
+                <ul class="notification-list">
+
+                    <li>✅ Python Assignment Tomorrow</li>
+
+                    <li>📅 New AI Study Plan Generated</li>
+
+                    <li>🎯 Daily Goal 70% Completed</li>
+
+                    <li>📚 Notes Successfully Saved</li>
+
+                    <li>🔥 Keep Your Study Streak Alive</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- AI Score -->
+
+        <div class="col-lg-4">
+
+            <div class="glass-card score-card">
+
+                <div class="card-header-custom">
+
+                    <h3>
+
+                        🤖 AI Performance
+
+                    </h3>
+
+                </div>
+
+                <div class="score-circle">
+
+                    <h1>
+
+                        92%
+
+                    </h1>
+
+                </div>
+
+                <p>
+
+                    Excellent consistency.
+
+                    Keep studying daily to reach your weekly goal.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            RECENT ACTIVITIES
+========================================== -->
+
+<section class="mt-5">
+
+    <div class="glass-card">
+
+        <div class="card-header-custom">
+
+            <h3>
+
+                📜 Recent Activities
+
+            </h3>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot bg-success"></div>
+
+                <div class="timeline-content">
+
+                    <h5>
+
+                        Python Session Completed
+
+                    </h5>
+
+                    <p>
+
+                        Completed Functions & Modules chapter.
+
+                    </p>
+
+                    <small>
+
+                        09:00 AM
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot bg-primary"></div>
+
+                <div class="timeline-content">
+
+                    <h5>
+
+                        AI Planner Generated Schedule
+
+                    </h5>
+
+                    <p>
+
+                        New weekly timetable has been created.
+
+                    </p>
+
+                    <small>
+
+                        11:30 AM
+
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot bg-warning"></div>
+
+                <div class="timeline-content">
+
+                    <h5>
+
+                        Notes Updated
+
+                    </h5>
+
+                    <p>
+
+                        Added DBMS normalization notes.
+
+                    </p>
+
+                    <small>
+
+                        02:15 PM
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            AI CHAT ASSISTANT
+========================================== -->
+
+<section class="mt-5">
+
+    <div class="glass-card">
+
+        <div class="card-header-custom">
+
+            <h3>
+
+                🤖 AI Study Assistant
+
+            </h3>
+
+        </div>
+
+        <div class="chat-box">
+
+            <div class="chat-message ai">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <div>
+
+                    Hello <span id="chatUser">Student</span> 👋
+
+                    <br>
+
+                    How can I help you today?
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="chat-input mt-3">
+
+            <input
+
+                type="text"
+
+                class="form-control"
+
+                placeholder="Ask anything...">
+
+            <button
+
+                class="btn btn-primary">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            MOTIVATION + LEADERBOARD
+========================================== -->
+
+<section class="mt-5">
+
+    <div class="row g-4">
+
+        <!-- Motivation -->
+
+        <div class="col-lg-6">
+
+            <div class="glass-card motivation-card">
+
+                <h2>
+
+                    🌤 Daily Motivation
+
+                </h2>
+
+                <blockquote>
+
+                    Success comes from consistent effort.
+
+                    Study a little every day and your future will thank you.
+
+                </blockquote>
+
+            </div>
+
+        </div>
+
+        <!-- Leaderboard -->
+
+        <div class="col-lg-6">
+
+            <div class="glass-card">
+
+                <div class="card-header-custom">
+
+                    <h3>
+
+                        🏆 Weekly Leaderboard
+
+                    </h3>
+
+                </div>
+
+                <table class="table table-dark table-hover">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Rank</th>
+
+                            <th>Name</th>
+
+                            <th>Hours</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>🥇</td>
+
+                            <td>Student 1</td>
+
+                            <td>42 Hours</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>🥈</td>
+
+                            <td>Student 2</td>
+
+                            <td>39 Hours</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>🥉</td>
+
+                            <td>Student 3</td>
+
+                            <td>36 Hours</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>4️⃣</td>
+
+                            <td>Student 4</td>
+
+                            <td>31 Hours</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            WEEKLY STUDY HEATMAP
+========================================== -->
+
+<section class="mt-5">
+
+    <div class="glass-card">
+
+        <div class="card-header-custom">
+
+            <h3>
+
+                📈 Weekly Study Heatmap
+
+            </h3>
+
+        </div>
+
+        <div class="heatmap">
+
+            <div class="heat high"></div>
+            <div class="heat medium"></div>
+            <div class="heat high"></div>
+            <div class="heat low"></div>
+            <div class="heat medium"></div>
+            <div class="heat high"></div>
+            <div class="heat high"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            FOOTER
+========================================== -->
+
+<footer class="dashboard-footer mt-5">
+
+    <p>
+
+        © 2026 Smart AI Study Planner |
+
+        Developed by Team Smart AI Study Planner
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<!-- ==========================================
+            JAVASCRIPT
+========================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="assets/js/workspace.js"></script>
+
+<script src="assets/js/dashboard.js"></script>
+
+<script>
+
+if (typeof AOS !== "undefined") {
+
+    AOS.init({ duration: 700, once: true });
+
+}
+
+</script>
+
+</body>
+
+</html>
+
